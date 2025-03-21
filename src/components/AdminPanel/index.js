@@ -22,7 +22,7 @@ const AdminPanel = () => {
   const fetchProducts = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/auth/products',{
+      const response = await axios.get('https://ecommerce-backend-app-eunq.onrender.com/api/auth/products',{
         headers: { Authorization: `Bearer ${token}` },
       });
       setProducts(response.data.products);
@@ -49,12 +49,12 @@ const AdminPanel = () => {
       const token = localStorage.getItem('token');
       if (editingCode) {
         
-        const response = await axios.get('http://localhost:5000/api/auth/products',{
+        const response = await axios.get('https://ecommerce-backend-app-eunq.onrender.com/api/auth/products',{
           headers: { Authorization: `Bearer ${token}` },
         });
 
         await axios.put(
-          `http://localhost:5000/api/auth/updateProduct/${editingCode}`,
+          `https://ecommerce-backend-app-eunq.onrender.com/api/auth/updateProduct/${editingCode}`,
           newProduct,
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -62,7 +62,7 @@ const AdminPanel = () => {
         );
       } else {
         await axios.post(
-          'http://localhost:5000/api/auth/registerProduct',
+          'https://ecommerce-backend-app-eunq.onrender.com/api/auth/registerProduct',
           newProduct,
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -90,7 +90,7 @@ const AdminPanel = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.delete(
-        `http://localhost:5000/api/auth/deleteProduct/${productCode}`,
+        `https://ecommerce-backend-app-eunq.onrender.com/api/auth/deleteProduct/${productCode}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

@@ -16,7 +16,7 @@ const Login = () => {
         e.preventDefault();
         setError("");
         try {
-            const response = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+            const response = await axios.post("https://ecommerce-backend-app-eunq.onrender.com/api/auth/login", { email, password });
             console.log("Response from UserLogin-", response);
             if (response.data.success) {
                 const token = response.data.token;

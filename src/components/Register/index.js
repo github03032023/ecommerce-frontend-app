@@ -1,85 +1,3 @@
-// import React, { useState } from "react";
-// import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-// import { Link } from "react-router-dom";
-
-// const Register = () => {
-//     const [formData, setFormData] = useState({
-//         name: "",
-//         email: "",
-//         password: "",
-//         confirmPassword: "",
-//         phone: "",
-//         age: "",
-//         gender: "",
-//         location: ""
-//     });
-//     const [error, setError] = useState("");
-//     const navigate = useNavigate();
-
-//     const handleChange = (e) => {
-//         setFormData({ ...formData, [e.target.name]: e.target.value });
-//     };
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         setError("");
-//         if (formData.password !== formData.confirmPassword) {
-//             setError("Passwords do not match");
-//             return;
-//         }
-//         try {
-//             const response = await axios.post("http://localhost:5000/api/auth/registerUser", formData);
-//             if (response.data.success) {
-//                 navigate("/login");
-//             } else {
-//                 setError(response.data.message);
-//             }
-//         } catch (err) {
-//             setError("Registration failed. Please try again.");
-//         }
-//     };
-
-//     return (
-//         <div className="container">
-//             <div className="row vh-100 align-items-center">
-//                 <div className="col-md-6 d-none d-md-block">
-//                     <img src="/images/register.jpg" alt="Register" className="img-fluid rounded" />
-//                 </div>
-//                 <div className="col-md-6">
-//                     <div className="card shadow-lg p-4">
-//                         <h2 className="text-center mb-4">Register</h2>
-//                         {error && <p className="alert alert-danger">{error}</p>}
-//                         <form onSubmit={handleSubmit}>
-//                             {/* Form fields for name, email, password, confirmPassword, phone, age, gender, location */}
-//                             <button type="submit" className="btn btn-primary w-100">Register</button>
-//                         </form>
-//                         <p className="text-center mt-3">
-//                             Already have an account? <a href="/login">Login here</a>
-//                         </p>
-//                     </div>
-//                     <p className="text-center mt-3">
-//                         Already have an account? <Link to="/login">Login here</Link>
-//                     </p>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Register;
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
@@ -122,7 +40,7 @@ const Register = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/registerUser', data);
+            const response = await axios.post('https://ecommerce-backend-app-eunq.onrender.com/api/auth/registerUser', data);
             if (response.data.success) {
                 navigate('/login');
             } else {

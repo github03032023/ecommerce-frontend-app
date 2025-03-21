@@ -65,7 +65,7 @@ const Payment = () => {
             // Send paymentMethod.id to backend
             const token = localStorage.getItem('token');
             const response = await axios.post(
-                'http://localhost:5000/api/auth/payment',
+                'https://ecommerce-backend-app-eunq.onrender.com/api/auth/payment',
                 {
                     userId: userId,
                     name,

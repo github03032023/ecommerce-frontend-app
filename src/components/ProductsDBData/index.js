@@ -9,7 +9,7 @@ const ProductsDBData = ({ searchQuery }) => {
   useEffect(() => {
     setLoading(true);
 
-    axios.get('http://localhost:5000/api/auth/fetchProducts')
+    axios.get('https://ecommerce-backend-app-eunq.onrender.com/api/auth/fetchProducts')
       .then((response) => {
         console.log("response: ", response?.data);
         setData(response?.data.products);
