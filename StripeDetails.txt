@@ -1,0 +1,26 @@
+
+Stripe Details
+
+Publishable key
+pk_test_51R4zWDHQ0Inu2WWrgWUYAbKrFrQQm0GCL4WmMQH0XA4RzriWnsQbN5MnsjQTMnT4RYI1H6IdHtIuAWAUMk7gtjrd00DKM65wVY
+—
+Mar 21
+
+More options
+Secret key
+sk_test_51R4zWDHQ0Inu2WWrKLwnWStPJwQNXbFlvRoExsCgWV0ZhVvCmg8Eww1G2I5TI20wExk9e0obTrWmtnT1kmgMULEj00EYpCIzDX
+—
+Mar 21
+
+
+
+const testCard = {
+  cardNumber: "4242424242424242",
+  expiryDate: "12/34",
+  cvv: "123",
+  amount: 100 // USD or as needed
+};
+
+
+
+ZipCode -  12345
